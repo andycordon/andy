@@ -1,6 +1,7 @@
 //Ici on recupere tout les jeux de société pour commencer
 import { useState, useEffect } from 'react';
 import Game from '../../Components/Game/Game'
+import './Home.css'
 
 
 function App() {
@@ -18,6 +19,17 @@ function App() {
 
   return (
     <>
+    <h1>MES JEUX DE SOCIETE</h1>
+      <div className="homes">
+        {games.map((game) => {
+          return (
+            <div className='home'>
+                <h2 className='home-title'>{game.name}</h2>
+                <img className='home-pic' src={game.pic} alt="Illustration du jeu de société"/>
+            </div>
+          );
+        })}
+      </div>
       <Game />
     </>
   );
