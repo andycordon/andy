@@ -23,10 +23,12 @@ function App() {
       <div className="homes">
         {games.map((game) => {
           return (
+            <a href='Affiche la fiche du jeu sur lequel je clique'>
             <div className='home'>
                 <h2 className='home-title'>{game.name}</h2>
                 <img className='home-pic' src={game.pic} alt="Illustration du jeu de société"/>
             </div>
+            </a>
           );
         })}
       </div>
