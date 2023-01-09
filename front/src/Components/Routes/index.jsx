@@ -2,17 +2,17 @@
 
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import App from "../../App";
-import Game from "../../Game";
+import Game from "../Game/Game";
+import Home from "../../Containers/Home/Home";
 
 
 const index = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/game" element={<Game />} />
-        </Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/game/:id" element={<Game />} />
+      </Routes>
     </BrowserRouter>
   );
 };
