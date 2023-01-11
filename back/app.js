@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import {v4 as uuidv4} from 'uuid'
 
 const app = express();
 
@@ -11,7 +12,7 @@ app.listen(3000, () => {
 
 const games = [
   {
-    id: 1,
+    id: uuidv4(),
     name: "MYSTERIUM",
     sub: "Réflexion et Perception",
     players: "2-7",
@@ -22,7 +23,7 @@ const games = [
     pic: "/img/mysterium.jpg",
   },
   {
-    id: 2,
+    id: uuidv4(),
     name: "UNLOCK",
     sub: "Escape game",
     players: "2-6",
@@ -33,7 +34,7 @@ const games = [
     pic: "/img/unlock1.jpg",
   },
   {
-    id: 3,
+    id: uuidv4(),
     name: "COLT EXPRESS",
     sub: "Planification et anticipation",
     players: "2-6",

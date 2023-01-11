@@ -3,14 +3,15 @@ import { useState, useEffect } from 'react';
 import './Game.css';
 import { useParams } from "react-router-dom";
 
+
 function App() {
   const [game, setGames] = useState([]);
   const { id } = useParams();
   useEffect(() => {
     const getGamesFromApi = async () => {
-      const gameIdNumber = Number(id);
+      const gameIdString = String(id);
 
-      const response = await fetch("http://localhost:3000/games/" + gameIdNumber);
+      const response = await fetch("http://localhost:3000/games/" + gameIdString);
       const foundGame = await response.json();
       setGames(foundGame);
     };
